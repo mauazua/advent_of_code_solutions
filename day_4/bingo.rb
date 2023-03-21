@@ -13,7 +13,7 @@ class Bingo
     create_boards
   end
 
-  def play_with_squid
+  def play_with_squid # 🦑
     winner_board, number = catch(:board_with_number) do
       drawn_numbers.each_with_index do |number, index|
         boards.each do |board|
