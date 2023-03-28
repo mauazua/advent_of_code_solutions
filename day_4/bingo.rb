@@ -25,6 +25,21 @@ class Bingo
     winner_board.calculate_score(just_called_number: number.to_i)
   end
 
+  def let_the_squid_win
+    board_with_number = []
+    drawn_numbers.each_with_index do |number, index|
+      boards.each do |board|
+        next if board.bingo?
+
+        board.mark_number(number: number)
+        board_with_number = [board, number] if index >= 4 && board.bingo?
+      end
+    end
+
+    last_winner_board, number = board_with_number
+    last_winner_board.calculate_score(just_called_number: number.to_i)
+  end
+
   private
 
   def create_boards
