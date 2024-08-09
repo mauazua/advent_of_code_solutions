@@ -1,0 +1,13 @@
+1,3
+1,2
+2,1
+2,2
+3,1
+1,1
+5,4
+9,9
+
+fold along x=5
+fold along y=4
+fold along x=3
+fold along y=2
